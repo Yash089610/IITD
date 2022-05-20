@@ -1,0 +1,198 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{xcolor}
+
+\title{Study of Digital Storage Oscilloscope \\ Lab Report 1 \\ ELP100}
+\author{Yash Agarwal \\ 2021EE10638 \\ Group 29}
+\date{April 2, 2022}
+
+\begin{document}
+\pagecolor{yellow!15}
+\maketitle
+\vfill
+\tableofcontents
+\newcolumntype{V}{>{\centering\arraybackslash} m{.4\linewidth} }
+\newpage
+\section{Voltage Measurement}
+\vspace{10px}
+\subsection{Aim}
+To study the basic working of Digital Storage Oscilloscope (DSO) and to measure voltage of an input signal.
+\vspace{10px}
+\subsection{Apparatus}
+\begin{enumerate}
+    \item Digital Storage Oscilloscope (DSO1052B)
+    \item DC Power supply (0 – 30 Volts)
+    \item Function Generator (0 – 3 MHz)
+\end{enumerate}
+\vspace{10px}
+\subsection{Theory}
+\begin{equation}
+    V_{P-P}= Deflection \times \frac{Volts}{Division}
+\end{equation}
+\begin{equation}
+    V_{RMS}= \frac{V_{P-P}}{2 \sqrt{2}}
+\end{equation}
+\vspace{10px}
+\subsection{Observation}
+\vspace{10px}
+\begin{center}
+\begin{tabular}{|c | c | c | c|} 
+ \hline
+    \ & \ & \ & \ \\
+    Deflection & $ \frac{Volts}{Division} $ & $ V_{P-P} $ & $ V_{RMS} $ \\ [1em]
+    \hline
+    \ & \ & \ & \ \\
+    1.28 & 10 & 12.8 & 4.52 \\
+    0.72 & 10 & 7.2 & 2.55 \\
+    1.72 & 10 & 17.2 & 6.08 \\
+    1.48 & 10 & 14.8 & 5.23 \\
+    \ & \ & \ & \ \\
+ \hline
+\end{tabular}
+\end{center}
+\vspace{10px}
+\subsection{Conclusion}
+Hence, we were able to measure the amplitude voltage of a given sine wave signal
+with the help of a Digital Storage Oscilloscope.
+\newpage
+
+\section{Frequency Measurement}
+\vspace{15px}
+\subsection{Aim}
+To study the basic working of Digital Storage Oscilloscope (DSO) and to make frequency measurement by means of Lissajous patterns. 
+\vspace{15px}
+\subsection{Apparatus}
+\begin{enumerate}
+    \item Digital Storage Oscilloscope (DSO1052B)
+    \item DC Power supply (0 – 30 Volts)
+    \item Function Generator (0 – 3 MHz)
+\end{enumerate}
+\vspace{15px}
+\subsection{Theory}
+
+\begin{wrapfigure}{R}{0.3\textwidth}
+\fcolorbox{black}{white}{\includegraphics[width=0.25\textwidth]{2Theory.png}}
+\end{wrapfigure}
+The unknown frequency signal is usually applied to the vertical terminal of the
+oscilloscope and the standard frequency signal is applied to the horizontal amplifier. The horizontal time-base mode should be set to XY mode. Once the
+DSO gets the two signals – the known and the unknown, the Lissajous pattern observed is evaluated.
+\begin{equation}
+    F_{Unknown}=F_{Known} \times \frac{T_H}{T_V}
+\end{equation}
+\begin{center}
+$T_H$ is the number of points of horizontal tangency \\
+$T_V$ is the number of points of vertical tangency \\
+$F_{Known}$ is the known frequency\\
+\end{center}
+\subsection{Observation}
+\vspace{10px}
+
+\begin{center}
+\begin{tabular}{| V | c | c | c | c|} 
+ \hline
+    Lissajous Pattern & $T_H$ & $T_V$ & $F_{Known}$ & $F_{Unknown}$ \\
+    \hline
+    \vspace{10px}
+    \fcolorbox{black}{yellow!15}{\includegraphics[width=0.35\textwidth]{2.2.jpg}} & 1 & 1 & 1kHz & 1kHz \\
+    \vspace{10px} 
+    \fcolorbox{black}{yellow!15}{\includegraphics[width=0.35\textwidth]{2.1.jpg}} & 2 & 1 & 1kHz & 2kHz \\
+    \vspace{10px}
+    \fcolorbox{black}{yellow!15}{\includegraphics[width=0.35\textwidth]{2.5.jpg}} & 3 & 1 & 1kHz & 3kHz \\
+    \ & \ & \ & \ & \ \\
+    \hline
+\end{tabular}
+\end{center}
+\vspace{15px}
+\subsection{Conclusion}
+Hence we have easily determined the frequency of the unknown signal from Lissajous
+figures between the known and the unknown signal.
+\newpage
+
+\section{Phase Measurement}
+\subsection{Aim}
+To study the basic working of Digital Storage Oscilloscope (DSO) and to measure phase difference between two signals by use of Lissajous Patterns observed on the DSO screen.
+\subsection{Apparatus}
+\begin{enumerate}
+    \item Digital Storage Oscilloscope (DSO1052B)
+    \item DC Power supply (0 – 30 Volts)
+    \item Function Generator (0 – 3 MHz)
+    \item Multimeter (FLUKE 115)
+    \item Variable resistor
+    \item Capacitor
+    \item Breadboard
+    \item Jumpers
+\end{enumerate}
+\subsection{Theory}
+
+\begin{wrapfigure}{R}{0.2\textwidth}
+    \fcolorbox{black}{white}{\includegraphics[width=0.2\textwidth]{3Theory.PNG}}
+\end{wrapfigure}
+
+According to the circuit, there are two signals that are generated – the first is the one across A and G, the second is across B and G. Let us call these set of signals as Signal A and Signal B. Switching the DSO into the X-Y mode, we get ellipses. 
+
+\begin{wrapfigure}{R}{0.2\textwidth}
+    \fcolorbox{black}{white}{\includegraphics[width=0.2\textwidth]{3.1Theory.PNG}}
+\end{wrapfigure}
+
+According to the figure, the phase difference $\theta$ is given by the
+equation:
+\includegraphics[width=0\textwidth]{3.1Theory.PNG}
+\begin{equation}
+    sin  \ \theta = \frac{C}{A}
+\end{equation}
+
+Theoretically, \[ tan \theta = \frac{X_C}{R}\] where R is the Resistance and $ X_C$ is the Capacitive resistance of Capacitor, given by \[ X_C = \frac{1}{\omega \times Capacitance} \ \; and \; \ \omega=2 \times \pi \times Frequency \]
+\subsection{Observation}
+\vspace{10px}
+
+\begin{center}
+\begin{tabular}{| V | c | c | c | c | c |} 
+ \hline
+    Lissajous Pattern & R in k$\Omega$  & A in V & C in V & Measured $\theta$ & Calculated $\theta$ \\
+    \hline
+    \vspace{10px}
+    \fcolorbox{black}{yellow!15}{\includegraphics[width=0.3\textwidth]{3.1.jpg}} & 1.227 & 3.2 & 1.58 & $\ang{29.58}$ & $\ang{29.42}$ \\
+    \vspace{10px}
+    \fcolorbox{black}{yellow!15}{\includegraphics[width=0.3\textwidth]{3.3.jpg}} & 7.25 & 3.2 & 0.32 & $\ang{5.73}$ & $\ang{5.45}$  \\
+    \vspace{10px}
+    \fcolorbox{black}{yellow!15}{\includegraphics[width=0.3\textwidth]{3.4.jpg}} & 2.38 & 3.38 & 1 & $\ang{17.21}$ & $\ang{16.21}$ \\
+    \vspace{10px}
+    \fcolorbox{black}{yellow!15}{\includegraphics[width=0.3\textwidth]{3.6.jpg}} & 0.76 & 3.3 & 2.2 & $\ang{41.81}$ & $\ang{42.31}$ \\
+    \ & \ & \ & \ & \ & \ \\
+ \hline
+\end{tabular}
+\end{center}
+\vspace{10px}
+\subsection{Conclusion}
+Hence we were able to determine the phase difference between two signals with
+the help of a DSO. \\
+There is a marginal error which is expected.
+\newpage
+\section{Sources of Error}
+\begin{itemize}
+    \item Scale of DSO is not properly set
+    \item Loose connections present
+    \item Connections changed while circuit is powered on
+    \item Resistance in wires change
+\end{itemize}
+
+\vspace{15px}
+
+\section{Precautions}
+
+\begin{itemize}
+    \item Make the connections neat and tight
+    \item Don’t leave the switch on for long continuous periods of time
+    \item Wear proper shoes and use insulated tools
+\end{itemize}
+
+\vspace{15px}
+
+\section{Concluding Remarks}
+In this experiment, we learned how to use the DSO's(Digital Storage Oscilloscope) basic functions. The DSO was used to determine the voltage of an input sin wave signal from an FPG (Frequency Pulse Generator), as well as the frequency difference between two signals. Using the tangent approach is a good way to go. The DSO was also used to determine the phase difference between two signals, on an AC circuit, and the results were confirmed using theoretical formulae. Furthermore, we became acquainted with the fundamental functions of an oscilloscope, learned more about Lissajous Patterns, and learned how to use an oscilloscope know how to build a breadboard prototype circuit. \\ 
+Hence we were able to analyze the theoretical knowledge gained via simple experiments using an oscilloscope.
+\end{document}
