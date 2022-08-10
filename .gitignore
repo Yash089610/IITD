@@ -2,6 +2,12 @@
 **/*.rar
 **/*.7z
 
+# Allow testcases*.zip
+
+!**/[Tt]estcases*.zip
+!**/[Tt]estcases*.rar
+!**/[Tt]estcases*.7z
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
